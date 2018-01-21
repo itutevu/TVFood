@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+       >
+
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <TextView
+                android:text="Quận 1"
+                android:id="@+id/tvrow1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorSoDuong"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:text="123 đường"
+                android:background="@drawable/gridcorner_number_street"
+                android:id="@+id/tvrow2"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/colorSoDuong"
+                android:gravity="center|start"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

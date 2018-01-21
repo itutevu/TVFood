@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp">
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/bancomuonthoatkhong"
+            android:textColor="@color/black_85"
+            android:textSize="21sp" />
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txt"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="232dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:background="@null"
+                android:id="@+id/btn_co"
+                android:text="@string/co"
+                android:textColor="@color/colorBottomBar"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:textColor="@color/colorWhite"
+                android:text="@string/khong"
+                android:background="@color/colorBottomBar"
+                android:id="@+id/btn_khong"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

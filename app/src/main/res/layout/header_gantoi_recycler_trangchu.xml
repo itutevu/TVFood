@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDD"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/custom_button_gantoi"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:text="@string/gantoi"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_nomal"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_reload_GanToi"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="#FFF"
+                android:outlineProvider="bounds"
+                android:padding="2dp"
+                android:src="@drawable/icon_location_trangchu" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@color/colorWhite">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:fadeScrollbars="true"
+                android:focusableInTouchMode="true">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <RelativeLayout
+                android:id="@+id/relaKhongCoKetQua"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtKhongCoKetQua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/khongcoketqua"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtThuLai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtKhongCoKetQua"
+                    android:gravity="center"
+                    android:text="@string/thulai"
+                    android:textColor="@color/colorBottomBar"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <FrameLayout
+
+                android:id="@+id/progressBarGanToi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#DDD" />
+
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/linear_GanToi"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                 />
+            <View
+                android:background="@drawable/custom_item_gantoi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_open"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_icon_open" />
+
+            <TextView
+                android:id="@+id/txt_TenQuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/padding"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:maxLines="1"
+                android:text="Tên quán"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_DiaChi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:text="Địa chỉ"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

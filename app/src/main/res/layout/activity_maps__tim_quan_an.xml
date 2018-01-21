@@ -1,0 +1,219 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBottomBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="80dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="@dimen/height_sliding"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center|left"
+                    android:text="@string/timquanan"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#FFF"
+        android:gravity="bottom"
+        sothree:umanoClipPanel="true"
+        sothree:umanoFadeColor="@android:color/transparent"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="30dp"
+        sothree:umanoShadowHeight="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rela_Main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:background="@android:color/transparent"
+            android:paddingBottom="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context="com.example.user.tvfood.UI.MapsActivity_TimQuanAn" />
+
+                <ImageView
+                    android:id="@+id/img_icon"
+                    android:layout_width="45dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="40dp"
+                    android:src="@drawable/red_marker" />
+            </RelativeLayout>
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rela_Ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#666666"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.balysv.materialmenu.MaterialMenuView
+                    android:id="@+id/meterialMenu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="#FFF"
+                android:divider="@null">
+
+            </ListView>
+
+            <TextView
+                android:id="@+id/txt_KhongCoDuLieu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:background="#FFF"
+                android:gravity="center|top"
+                android:text="@string/khongcodulieu"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/progressBar_Load"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="#FFF">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="100dp" />
+            </FrameLayout>
+        </FrameLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_Distance"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_view_distance"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/linear_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3 km" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4 km" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="5 km" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="8 km" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="10 km" />
+        </LinearLayout>
+
+        <com.github.channguyen.rsv.RangeSliderView xmlns:rsv="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rsv_distance"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/linear_distance"
+            android:layout_centerHorizontal="true"
+            rsv:filledColor="@color/colorBottomBar" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <view
+        android:id="@+id/image"
+        class="com.example.user.tvfood.libCrop.CropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dip"
+        android:layout_y="0dip"
+        android:background="#55000000" />
+
+    <LinearLayout
+        android:background="@drawable/custom_cropimage_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+
+        <Button
+            android:background="@color/colorTransparent"
+            android:id="@+id/discard"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/huy" />
+
+        <ImageView
+            android:id="@+id/rotateLeft"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/ic_rotate_left" />
+
+        <ImageView
+            android:id="@+id/rotateRight"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/ic_rotate_right" />
+
+
+        <Button
+            android:textAllCaps="true"
+            android:background="@color/colorTransparent"
+            android:id="@+id/save"
+            android:layout_width="80dp"
+            android:textSize="14sp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/rotateRight"
+            android:text="@string/luu" />
+
+    </LinearLayout>
+</RelativeLayout>

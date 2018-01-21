@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBottomBar</item>
+        <item name="colorPrimaryDark">@color/colorActionBar</item>
+        <item name="colorAccent">@color/colorBottomBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="CropButton">
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/selector_crop_button</item>
+        <!-- todo: end Crop image -->
+    </style>
+
+    <style name="AnimationDialog">
+        <item name="android:windowEnterAnimation">@anim/alpha_enter</item>
+        <item name="android:windowExitAnimation">@anim/alpha_exit</item>
+    </style>
+
+    <style xmlns:tools="http://schemas.android.com/tools" name="TabLayout" parent="android:Widget" tools:ignore="PrivateResource">
+        <item name="tabBackground">@color/colorWhite</item>
+        <item name="tabIndicatorColor">@color/transparent</item>
+        <item name="tabIndicatorHeight">5dp</item>
+        <item name="android:selectableItemBackground">@color/transparent</item>
+    </style>
+
+    <style name="AppTheme.Louvre.Preview" parent="Louvre.Theme.Preview">
+        <item name="colorAccent">@color/colorBottomBar</item>
+    </style>
+
+    <style name="AppTheme.Louvre.Light.DarkActionBar" parent="Louvre.Theme.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorBottomBar</item>
+        <item name="colorPrimaryDark">@color/colorActionBar</item>
+        <item name="colorAccent">@color/colorBottomBar</item>
+    </style>
+
+
+</resources>

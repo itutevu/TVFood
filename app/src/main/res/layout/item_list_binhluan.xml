@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#666"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rela_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_background_binhluan"
+            android:elevation="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rela_Info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_Ava"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/upload_empty" />
+
+                        <TextView
+                            android:id="@+id/txtTeTaiKhoan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/img_Ava"
+                            android:text="Nguyễn Văn A"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:id="@+id/txtThoiGian"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtTeTaiKhoan"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/img_Ava"
+                            android:text="15 phút trước"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_Comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rela_Info"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorBlack" />
+
+                    <RelativeLayout
+                        android:id="@+id/rela_Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_below="@+id/txt_Comment"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <ImageView
+                            android:id="@+id/img_Image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="#EEEEEE"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/upload_empty" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/custom_image_binhluan" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/rela_Image"
+                        android:gravity="center|start"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:id="@+id/img_Like"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/icon_like" />
+
+                        <TextView
+                            android:id="@+id/txt_SoLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="..." />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/icon_comment"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txt_SoBinhLuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="..."
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rela_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_background_binhluan_extend"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/btnLike"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/like"
+                    android:gravity="center"
+                    android:text="@string/thich"
+                    android:textAllCaps="false"
+                    android:textColor="#111111" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/btnBinhLuan"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/cmt"
+                    android:gravity="center"
+                    android:text="@string/binhluan"
+                    android:textAllCaps="false"
+                    android:textColor="#111111" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

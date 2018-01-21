@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBottomBar"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_Back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/img_Search"
+                android:layout_toRightOf="@id/img_Back"
+                android:gravity="center"
+                android:text="@string/xacdinhvitri"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_nomal" />
+
+            <ImageView
+                android:id="@+id/img_Search"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_search2" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.user.tvfood.UI.MapsActivity_XacDinhViTri" />
+
+        <ImageView
+            android:id="@+id/img_Icon"
+            android:layout_width="45dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:paddingBottom="35dp"
+            android:src="@drawable/green_marker" />
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/button_Complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_check_white"
+        app:fabSize="normal"
+        app:useCompatPadding="true" />
+
+</RelativeLayout>
+
+

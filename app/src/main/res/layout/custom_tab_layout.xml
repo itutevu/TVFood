@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_account_box_black_24dp" />
+
+    <TextView
+        android:id="@+id/txtTabName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgIcon"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="abc"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:id="@+id/txt_New"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/custom_layout_new"
+        android:gravity="center"
+        android:text="99"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textsize_small" />
+</RelativeLayout>

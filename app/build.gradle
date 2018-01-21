@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.example.user.tvfood"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi', 'x86'//or armeabi-v7a、arm64-v8a、x86
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    maven {
+        url "http://dl.bintray.com/glomadrian/maven"
+    }
+    maven { url "https://jitpack.io" }
+    jcenter()
+    mavenCentral()
+    google()
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.1'
+            }
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestImplementation 'com.jayway.android.robotium:robotium:5.6.3'
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.balysv.materialmenu:material-menu:2.0.0'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.roughike:bottom-bar:2.3.1'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.devlight:infinitecycleviewpager:1.0.2'
+    implementation 'com.github.elevenetc:textsurface:0.9.1'
+    implementation 'com.github.devlight.pulseview:library:1.0.2'
+    implementation 'com.google.android.gms:play-services:11.0.2'
+    implementation 'com.google.android.gms:play-services-maps:11.0.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.github.channguyen:rsv:1.0.1'
+    implementation 'com.google.firebase:firebase-core:11.0.2'
+    implementation 'com.google.firebase:firebase-auth:11.0.2'
+    implementation 'com.google.firebase:firebase-database:11.0.2'
+    implementation 'com.google.firebase:firebase-storage:11.0.2'
+    implementation 'com.facebook.android:facebook-android-sdk:4.27.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.webianks.library:scroll-choice:1.0.1'
+    //ImageViewer
+    implementation 'com.github.stfalcon:frescoimageviewer:0.5.0'
+    implementation 'jp.wasabeef:fresco-processors:2.0.0'
+    implementation "com.facebook.fresco:fresco:1.2.0"
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+    implementation 'com.github.mmin18:realtimeblurview:1.1.0'
+    //END ImageViewer
+
+    // PICK IMAGE MULTI
+    implementation 'com.github.andremion:louvre:1.2.0'
+    implementation 'com.zxy.android:tiny:0.1.0'
+
+    //FCM
+    implementation 'com.google.firebase:firebase-messaging:11.0.2'
+
+    //progress dialog
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+    implementation 'com.andkulikov:transitionseverywhere:1.7.6'
+    implementation 'com.github.glomadrian:MaterialAnimatedSwitch:1.1@aar'
+    testImplementation 'junit:junit:4.12'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

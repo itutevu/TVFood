@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rela_Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.tvfood.UI.MainActivity">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rela_Ads">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/myAppbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_bottombar"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/colorBottomBar"
+                        app:layout_scrollFlags="scroll|enterAlways">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp">
+
+                            <com.balysv.materialmenu.MaterialMenuView
+                                android:id="@+id/meterialMenu"
+                                android:layout_width="@dimen/height_bottombar"
+                                android:layout_height="@dimen/height_bottombar"
+                                android:layout_centerVertical="true" />
+
+                            <TextView
+                                android:id="@+id/txt_Title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toRightOf="@+id/meterialMenu"
+                                android:gravity="center"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textsize_title"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.Toolbar>
+                </android.support.design.widget.AppBarLayout>
+
+                <com.example.user.tvfood.NonSwipeableViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/myAppbar"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                </com.example.user.tvfood.NonSwipeableViewPager>
+            </android.support.design.widget.CoordinatorLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rela_Ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tabLayout"
+                android:gravity="center"
+                android:visibility="visible" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_bottombar"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="@color/colorBottomBar"
+
+                android:windowSoftInputMode="adjustNothing" />
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn_Logout"
+
+                    android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#DDDDDD">
+
+                        <RelativeLayout
+                            android:id="@+id/rela_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:background="@drawable/custom_layout_profile"
+                            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/profile_image"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/default_avatar"
+                                    app:civ_border_color="@color/colorBottomBar"
+                                    app:civ_border_width="1dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/txt_ProfileName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:layout_marginRight="30dp"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:maxLines="2"
+                                        android:text="@string/activity_main_hoten"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/textsize_title"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txt_SDT"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:gravity="center"
+                                        android:text="@string/activity_main_sodienthoai"
+                                        android:textColor="@color/colorBlack" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/relaLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/background_login"
+                                android:gravity="center">
+
+                                <com.facebook.login.widget.LoginButton
+                                    android:id="@+id/connectWithFbButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/dangnhapvoifb"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginRight="15dp"
+                                        android:gravity="center"
+                                        android:text="@string/textdangnhap"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="@dimen/textsize_nomal"
+                                        android:textStyle="bold" />
+
+                                    <com.gigamole.library.PulseView
+                                        android:id="@+id/pulseView"
+                                        android:layout_width="250dp"
+                                        android:layout_height="250dp"
+                                        android:layout_gravity="center"
+                                        app:pv_alpha="70"
+                                        app:pv_color="@color/colorWhite"
+                                        app:pv_icon="@drawable/iconfb"
+                                        app:pv_icon_height="110dp"
+                                        app:pv_icon_width="110dp"
+                                        app:pv_interpolator="@android:anim/linear_interpolator"
+                                        app:pv_measure="height"
+                                        app:pv_spawn_period="500" />
+
+                                    <com.example.user.tvfood.ImageAnim_TapTap
+                                        android:layout_width="60dp"
+                                        android:layout_height="100dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rela_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="180dp"
+                            android:background="@drawable/custom_layout_profile2"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp">
+
+                                    <ImageView
+                                        android:id="@+id/img_1"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_centerVertical="true"
+                                        android:padding="4dp"
+                                        android:src="@drawable/ic_account_box_black_24dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toRightOf="@+id/img_1"
+                                        android:text="@string/activity_main_txt_taikhoan"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp">
+
+                                    <ImageView
+                                        android:id="@+id/img_2"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_centerVertical="true"
+                                        android:padding="4dp"
+                                        android:src="@drawable/ic_account_box_black_24dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toRightOf="@+id/img_2"
+                                        android:text="@string/activity_main_txt_taikhoan"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp">
+
+                                    <ImageView
+                                        android:id="@+id/img_3"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_centerVertical="true"
+                                        android:padding="4dp"
+                                        android:src="@drawable/ic_account_box_black_24dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toRightOf="@+id/img_3"
+                                        android:text="@string/activity_main_txt_taikhoan"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp">
+
+                                    <ImageView
+                                        android:id="@+id/img_4"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_centerVertical="true"
+                                        android:padding="4dp"
+                                        android:src="@drawable/icon_danhmuc" />
+
+                                    <TextView
+                                        android:id="@+id/txt_GioiThieu"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toRightOf="@+id/img_4"
+                                        android:text="@string/gioithieu"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#DDD" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:text="@string/trogiupvaphanhoi"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/txt_DanhGia"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/danhgia"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/txt_ChiaSeUngDung"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="30dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/chiaseungdung"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+                <Button
+                    android:id="@+id/btn_Logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_bottombar"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/custom_btn_lglo"
+                    android:gravity="center"
+                    android:text="@string/txt_dangxuat"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textsize_title"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

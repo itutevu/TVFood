@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.tvfood.UI.Tab_DiaChi">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_sliding"
+            android:background="#DDDDDD"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linear_TinhThanh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="120dp">
+
+                <TextView
+                    android:id="@+id/txt_DiaChi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:text="TP.HCM"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doitinhthanh2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/padding">
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/icon_khoangcach"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/txt_DoiTinhThanh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:text="@string/doitinhthanh"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/viewBottom"
+            android:layout_below="@+id/header"
+            android:animationCache="false"
+            android:groupIndicator="@null"
+            android:scrollingCache="false" />
+
+        <View
+            android:id="@+id/viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_bottombar"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "452302688338",
+    "firebase_url": "https://tvfood-1502856724182.firebaseio.com",
+    "project_id": "tvfood-1502856724182",
+    "storage_bucket": "tvfood-1502856724182.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452302688338:android:da3b3e0f1ea95e13",
+        "android_client_info": {
+          "package_name": "com.example.user.tvfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452302688338-meqgqkju0ul6av4jevpfr4crmlqhqn7g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.tvfood",
+            "certificate_hash": "060fcbffa64f37a22b3808b2d39ae8289d5a9672"
+          }
+        },
+        {
+          "client_id": "452302688338-r7vbmo8d3uce24g8sm4jkgkla3b3l0p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsoanrNPioilq8EGaeoy4IjA6xCCyoOfM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452302688338-r7vbmo8d3uce24g8sm4jkgkla3b3l0p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

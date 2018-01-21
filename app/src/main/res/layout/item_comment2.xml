@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearBinhLuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_Ava"
+            android:layout_width="@dimen/size_image_comment"
+            android:layout_height="@dimen/size_image_comment"
+            android:src="@drawable/icon2" />
+
+        <TextView
+            android:id="@+id/txt_Comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding"
+            android:text="áđas áđasađâs áđasađâs áđasađâsađâs áđasađâs áđasađâs áđasađâs áđasađâs áđasađâs áđasađâs áđasađâs" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/icon_like" />
+
+        <TextView
+            android:id="@+id/txt_SoBinhLuan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="..." />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#DDDDDD" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_call"
+                android:gravity="center"
+                android:text="Thích"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
